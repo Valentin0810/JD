@@ -1,4 +1,4 @@
-package lesson6;
+package lesson7;
 
 public class Point {
 
@@ -27,7 +27,7 @@ public class Point {
     }
 
     public double distance(Point point) {
-        return Math.sqrt((this.getX() * this.getX() - point.getX() * point.getX())
-                + (this.getY() * this.getY() - point.getY() * point.getY()));
+        return Math.sqrt(Math.pow(this.getX() - point.getX(),2)
+                + (Math.pow(this.getY() - point.getY(),2)));
     }
 }

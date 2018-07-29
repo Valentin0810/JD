@@ -1,6 +1,6 @@
-package lesson6;
+package lesson7;
 
-public class Rectangle {
+public class Rectangle extends Figure {
 
     private Point leftUpPoint;
     private Point rightDownPoint;
@@ -30,7 +30,13 @@ public class Rectangle {
         return rightDownPoint.distance(leftUpPoint);
     }
 
-    public double findArea(Rectangle rectangle) {
+    @Override
+    public String getName() {
+        return "Rectangle";
+    }
+
+    @Override
+    public double getArea() {
         int width = rightDownPoint.getX() - leftUpPoint.getX();
         int height = leftUpPoint.getY() - rightDownPoint.getY();
         return width * height;
